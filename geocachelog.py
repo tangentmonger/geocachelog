@@ -52,9 +52,6 @@ with open(output_file , "w") as log_tex:
     log_tex.write(footer.render(config = config))
 
 
-#process = subprocess.Popen(["pdflatex", "-halt-on-error", output_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 process = subprocess.Popen(["pdflatex", output_file])
-#output, errors = process.communicate()
-#print(output)
-#print(errors)
+output, errors = process.communicate()
     
