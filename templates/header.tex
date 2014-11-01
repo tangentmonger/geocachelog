@@ -1,0 +1,33 @@
+\documentclass[a4paper]{report}
+\usepackage[margin=1cm,a4paper, marginparwidth=0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\begin{document}
+\thispagestyle{empty}
+\sffamily %sans-serif font
+\setlength{\tabcolsep}{0ex} %padding inside table columns
+\setlength{\parindent}{0cm} %paragraph (first line) indentation
+
+\begin{tabular}{p{3cm} p{15cm}}
+\vspace{0pt} % keep header image and text adjacent and top-aligned
+\includegraphics[height=2.8cm,keepaspectratio]{logo}
+& 
+\vspace{0pt}
+\parbox[t]{15cm}{ %keep header text together in a cell but allow line breaks
+    \huge\emph{\textbf{[[config['geocache_name']]] }}
+    \\
+    \large\emph{ Geocache log for [[config['geocache_id']]] by [[config['geocache_owner']]]}
+    \\
+    \\
+    \large First to find: [[config['first_to_find']]] 
+    \\
+    Log replaced on [[config['log_replaced']]].
+}
+\end{tabular}
+\\
+\\
+
+
